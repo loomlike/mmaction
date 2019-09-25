@@ -33,6 +33,12 @@ If both rgb and optical flow are required, run the following script to extract f
 ```shell
 bash extract_frames.sh
 ```
+May need to change the script to specify dense_flow path as:
+```
+...
+python build_rawframes.py ../data/ucf101/videos/ ../data/ucf101/rawframes/ --num_gpu 8 --level 2 --flow_type tvl1 --df_path  ../third_party/dense_flow/
+...
+```
 
 ### Generate filelist
 Run the follow script to generate filelist in the format of rawframes and videos.
